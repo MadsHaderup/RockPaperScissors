@@ -11,7 +11,7 @@ public class Computer implements Player{
     @Override
     public String takeTurn() {
         Random ran = new Random();
-        int moveInt = ran.nextInt(3);
+        int moveInt = ran.nextInt(4);
         String computerMove = "";
         switch (moveInt){
             case 1:
