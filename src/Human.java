@@ -37,5 +37,4 @@ public class Human implements Player {
     public int getScore(){
         return this.score;
     }
-
 }
