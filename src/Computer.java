@@ -10,8 +10,8 @@ public class Computer implements Player{
 
     @Override
     public String takeTurn() {
-        Random ran = new Random();
-        int moveInt = ran.nextInt(4);
+        Random randomChoice = new Random();
+        int moveInt = randomChoice.nextInt(3)+1;
         String computerMove = "";
         switch (moveInt){
             case 1:
@@ -25,7 +25,6 @@ public class Computer implements Player{
                 break;
             default:
                 break;
-
         }
         return computerMove;
 

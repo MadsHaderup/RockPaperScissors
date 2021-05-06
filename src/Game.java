@@ -6,35 +6,35 @@ public class Game {
         Human human = new Human();
         Computer computer = new Computer();
 
+        //Best of 3
         while(human.getScore()<2 && computer.getScore() <2){
-            String humanStr = human.takeTurn();
-            String computerStr = computer.takeTurn();
-            System.out.println("Computer has: " + computerStr);
-            switch (humanStr) {
+            String humanChoice = human.takeTurn();
+            String computerChoice = computer.takeTurn();
+            System.out.println("Computer has: " + computerChoice);
+            switch (humanChoice) {
                 case "Rock":
-                    if (computerStr.equals("Paper")) {
+                    if (computerChoice.equals("Paper")) {
                         computer.setScore(1);
-                    } else if (computerStr.equals("Scissors")) {
+                    } else if (computerChoice.equals("Scissors")) {
                         human.setScore(1);
                     }
                     break;
 
                 case "Paper":
-                    if (computerStr.equals("Rock")) {
+                    if (computerChoice.equals("Rock")) {
                         human.setScore(1);
-                    } else if (computerStr.equals("Scissors")) {
+                    } else if (computerChoice.equals("Scissors")) {
                         computer.setScore(1);
                     }
                     break;
 
                 case "Scissors":
-                    if (computerStr.equals("Paper")) {
+                    if (computerChoice.equals("Paper")) {
                         human.setScore(1);
-                    } else if (computerStr.equals("Scissors")) {
+                    } else if (computerChoice.equals("Scissors")) {
                         computer.setScore(1);
                     }
                     break;
-
             }
         }
     }

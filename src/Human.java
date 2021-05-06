@@ -7,14 +7,13 @@ public class Human implements Player {
     public Human() {
         this.name = "Human";
         this.score = 0;
-
     }
 
     @Override
     public String takeTurn() {
-        Scanner sc = new Scanner(System.in);
+        Scanner scan = new Scanner(System.in);
         System.out.println("1. Sten, 2. Papir, 3. Saks");
-        int moveInt = sc.nextInt();
+        int moveInt = scan.nextInt();
         String humanMove = "";
         switch (moveInt) {
             case 1:
