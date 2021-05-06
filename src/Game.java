@@ -6,7 +6,7 @@ public class Game {
         Human human = new Human();
         Computer computer = new Computer();
 
-        //Best of 3
+        //Best of 3 games
         while(human.getScore()<2 && computer.getScore() <2){
             String humanChoice = human.takeTurn();
             String computerChoice = computer.takeTurn();

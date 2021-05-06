@@ -3,6 +3,7 @@ import java.util.Random;
 public class Computer implements Player{
     private String name;
     private int score;
+
     public Computer(){
         this.name = "Computer";
         this.score = 0;
