@@ -11,10 +11,17 @@ public class Human implements Player {
 
     @Override
     public String takeTurn() {
-        Scanner scan = new Scanner(System.in);
-        System.out.println("1. Sten, 2. Papir, 3. Saks");
-        int moveInt = scan.nextInt();
+        int moveInt;
         String humanMove = "";
+        Scanner scan = new Scanner(System.in);
+
+        System.out.println("1. Rock, 2. Paper, 3. Scissors");
+
+        if (scan.hasNextInt()){
+            moveInt = scan.nextInt();
+        } else {
+            moveInt = 4;
+        }
         switch (moveInt) {
             case 1:
                 humanMove = "Rock";
@@ -26,15 +33,16 @@ public class Human implements Player {
                 humanMove = "Scissors";
                 break;
             default:
+                System.out.println("Please pick a number between 1 and 3\n");
+                takeTurn();
                 break;
         }
         return humanMove;
     }
 
-    public void setScore(int point) {
-        this.score += point;
-    }
     public int getScore(){
         return this.score;
     }
+
+    public void setScore(int point) { this.score += point; }
 }

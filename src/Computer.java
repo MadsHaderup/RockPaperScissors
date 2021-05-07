@@ -31,11 +31,11 @@ public class Computer implements Player{
 
     }
 
-    public void setScore(int point) {
-        this.score += point;
-    }
-
     public int getScore() {
         return score;
+    }
+
+    public void setScore(int point) {
+        this.score += point;
     }
 }
